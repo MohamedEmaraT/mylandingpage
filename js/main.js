@@ -1,0 +1,3 @@
+document.querySelectorAll('.download-ex').forEach(item=>{item.addEventListener('click',()=>window.open('https://chromewebstore.google.com'))})
+let active=document.querySelectorAll('header .nav-link');active.forEach(item=>{item.addEventListener('click',()=>{active.forEach(link=>link.classList.remove('active'));item.classList.add('active')})})
+document.addEventListener("DOMContentLoaded",function(){const lazyImages=document.querySelectorAll('.lazyload');const lazyLoad=target=>{const io=new IntersectionObserver((entries,observer)=>{entries.forEach(entry=>{if(entry.isIntersecting){const img=entry.target;const src=img.getAttribute('data-src');img.setAttribute('src',src);observer.disconnect()}})});io.observe(target)};lazyImages.forEach(lazyLoad)})
